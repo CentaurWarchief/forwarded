@@ -14,7 +14,7 @@ func Parse(r *http.Request) *Forwarded {
 		return nil
 	}
 
-	regex := regexp.MustCompile("(?P<parameter>for|by|host|proto)=(?P<value>.[^;]+)")
+	regex := regexp.MustCompile("(for|by|host|proto)=(.[^;]+)")
 
 	f := &Forwarded{}
 
